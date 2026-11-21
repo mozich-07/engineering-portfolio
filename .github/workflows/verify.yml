@@ -1,0 +1,29 @@
+name: Verify portfolio
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+
+jobs:
+  portfolio:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify project catalog and links
+        run: python tools/check_repo.py
+      - name: Build and test the offline quiz app
+        working-directory: projects/quiz-bank-workshop
+        run: |
+          python work/build.py
+          node work/engine.test.cjs
+          node work/export.test.cjs
+  firmware:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install platformio==6.1.18
+      - name: Build for Arduino Uno
+        working-directory: projects/trafficlight-controller
+        run: pio run -e uno
