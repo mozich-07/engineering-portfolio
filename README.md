@@ -24,7 +24,7 @@
 | P08 | [STM32 桌面宠物机器人](projects/stm32-desktop-pet/) | 嵌入式与机器人 | 项目文档 |
 | P09 | [图片盲水印实验](projects/image-watermark-lab/) | 视觉与通信算法 | 项目文档 |
 | P10 | [焊丝端面识别与计数](projects/weld-wire-counter/) | 视觉与通信算法 | 项目文档 |
-| P11 | [照片转拼豆图纸](projects/bead-pattern-generator/) | 视觉与通信算法 | 项目文档 |
+| P11 | [照片转拼豆图纸](projects/bead-pattern-generator/) | 视觉与通信算法 | 算法源码与示例 |
 | P12 | [图像直方图与对比度增强](projects/image-contrast-lab/) | 视觉与通信算法 | 实验结果与说明 |
 | P13 | [光纤通信色散补偿](projects/optical-dispersion-compensation/) | 视觉与通信算法 | 实验结果与说明 |
 | P14 | [图像锐化与模糊复原](projects/image-deblurring-lab/) | 视觉与通信算法 | 实验结果与说明 |

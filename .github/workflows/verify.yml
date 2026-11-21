@@ -16,6 +16,9 @@ jobs:
           python work/build.py
           node work/engine.test.cjs
           node work/export.test.cjs
+      - name: Verify bead counts and SVG export
+        working-directory: projects/bead-pattern-generator
+        run: node demo.cjs
   firmware:
     runs-on: ubuntu-latest
     steps:
