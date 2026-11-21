@@ -2,6 +2,8 @@
 
 电子信息、嵌入式开发与硬件调试。这里记录我做过的工程、参与的团队项目和课程实验。每个目录列出本人承担的工作、可查阅的交付物和下一步要验证的问题。
 
+[![仓库检查与固件编译](https://github.com/mozich-07/engineering-portfolio/actions/workflows/verify.yml/badge.svg)](https://github.com/mozich-07/engineering-portfolio/actions/workflows/verify.yml)
+
 ## 代表项目
 
 | 项目 | 我负责的部分 | 可以直接查看 |

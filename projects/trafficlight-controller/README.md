@@ -15,11 +15,11 @@ Arduino Uno 状态机组织正常配时、夜间黄闪与紧急双红，连接�
 
 在 Arduino IDE 中打开 `firmware/TrafficLightController/TrafficLightController.ino`，选 Arduino Uno，通过库管理器安装 Adafruit GFX Library 与 Adafruit SSD1306。接线以源码引脚定义为准；两方向黄灯共用 D12，D0/D1 亦为串口脚。
 
-检查正常配时、夜间黄闪与紧急双红；记录各模式切换和灯态。当前整理只核对了源码，未在本机编译或接硬件复测。仅供低压教学演示，不用于真实道路。
+检查正常配时、夜间黄闪与紧急双红；记录各模式切换和灯态。GitHub Actions 已使用 PlatformIO 的 Uno 目标编译此草图。[查看编译记录](https://github.com/mozich-07/engineering-portfolio/actions/runs/44903194334)。实机灯态、按钮消抖和数码管刷新仍待台架复测。仅供低压教学演示，不用于真实道路。
 
 ## 后续计划
 
-- 核对发布许可、依赖、接线和三种模式的台架验收，补拍对应实物演示。
+- 用逻辑分析仪记录两路绿灯与共用黄灯的相位，补拍夜间模式和紧急模式退出的完整过程。
 
 ## 接线和验收
 
