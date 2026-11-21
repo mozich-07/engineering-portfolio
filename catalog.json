@@ -25,7 +25,7 @@
     "slug": "powerpet-ups",
     "name": "PowerPet｜UPS 状态显示",
     "group": "embedded",
-    "page": "collections/embedded/README.md"
+    "page": "projects/desktop-robot-evolution/README.md"
   },
   {
     "id": "P05",
@@ -46,14 +46,14 @@
     "slug": "esp32s3-desktop-robot",
     "name": "ESP32-S3 桌面互动机器人｜毕设",
     "group": "embedded",
-    "page": "collections/embedded/README.md"
+    "page": "projects/desktop-robot-evolution/README.md"
   },
   {
     "id": "P08",
     "slug": "stm32-desktop-pet",
     "name": "STM32 桌面宠物机器人",
     "group": "embedded",
-    "page": "collections/embedded/README.md"
+    "page": "projects/desktop-robot-evolution/README.md"
   },
   {
     "id": "P09",
@@ -256,7 +256,7 @@
     "slug": "esp32c3-desktop-robot",
     "name": "ESP32-C3 桌面机器人",
     "group": "embedded",
-    "page": "collections/embedded/README.md"
+    "page": "projects/desktop-robot-evolution/README.md"
   },
   {
     "id": "P38",
@@ -313,5 +313,12 @@
     "name": "货架商品盘点",
     "group": "ml",
     "page": "collections/ml/README.md"
+  },
+  {
+    "id": "P46",
+    "slug": "camera-hand-interaction",
+    "name": "摄像头手势与粒子交互",
+    "group": "imaging",
+    "page": "collections/imaging/README.md"
   }
 ]

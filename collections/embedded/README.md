@@ -1,11 +1,19 @@
 # 嵌入式与机器人
 
-| 项目 | 平台 | 我做的工作 |
+| 项目 | 控制平台 | 我负责的部分 |
 | --- | --- | --- |
-| [四足巡检机器人](../../projects/quadruped-robot/) | ESP32-C3、PWM | 主控 PCB、部分舵机控制与结构适配。多足集群课题沿用了这台原型，公开照片展示的是单机装配。 |
-| [无障碍饮水机](../../projects/accessible-water-dispenser/) | STM32F103、手势与语音输入 | 结构建模、部分控制逻辑和取水联调。 |
-| [路畅交通灯](../../projects/trafficlight-controller/) | Arduino Uno、I²C、OLED | 独立写固件，在同一台教学装置上实现相位切换、倒计时、夜间和紧急模式。 |
-| STM32 桌面宠物与 PowerPet | STM32、PWM、OLED | 基于开源桌宠做芯片与舵机适配，调整打印件公差。PowerPet 中我负责桌面端同步 UPS 状态并轮换显示。[桌宠原方案](https://oshwhub.com/sngelswyh/stm32-smart-desktop-pet) |
-| ESP32 桌面机器人 | ESP32-C3、ESP32-S3 | C3 版留下了初版结构模型；S3 毕设围绕 LCD 板、固件部署和音乐服务展开。 |
+| [四足巡检机器人](../../projects/quadruped-robot/) | ESP32-C3、八路舵机 | 主控板、部分舵机程序、打印件适配和单机联调 |
+| [无障碍饮水机](../../projects/accessible-water-dispenser/) | STM32F103、手势与语音模块 | 结构设计、部分控制逻辑和取水联调 |
+| [双向交通灯](../../projects/trafficlight-controller/) | Arduino Uno、OLED、数码管 | 独立开发控制固件，完成三种模式与双按键交互 |
 
-**其他实践。** 在智能鱼缸大创项目中，我负责项目文档。循迹小车与机械臂是设备操作、图像识别及调试实践；51、STM32 和 ESP32 开发板用于外设练习。
+## 桌宠的四个阶段
+
+我先在 STM32 上调整舵机和结构，后来把桌宠做成 PowerPet 的 UPS 状态显示端，再转向 ESP32-C3 和 ESP32-S3。四个阶段的实物、机身模型、上游方案和个人工作放在同一页。[查看桌面机器人演进记录](../../projects/desktop-robot-evolution/)
+
+## 团队及设备实践
+
+| 智能鱼缸的触屏控制 | 循迹小车底板 | 机械臂实验设备 |
+| --- | --- | --- |
+| ![鱼缸演示画面](assets/aquarium-hmi.jpg) | ![小车底板](assets/car.jpg) | ![机械臂](assets/arm.jpg) |
+
+鱼缸图片取自省级大创团队的演示视频，前景是控制面板，我承担项目文档撰写。小车和机械臂对应我的设备操作与调试实践。另有 51、STM32 和 ESP32 开发板的外设学习记录。[开发板实物照片](assets/development-board.jpg)
