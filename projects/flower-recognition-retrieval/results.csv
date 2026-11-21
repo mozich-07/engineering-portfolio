@@ -1,0 +1,5 @@
+Model,records,mean_ValidationAccuracy,mean_ValidationMacroF1,mean_TestAccuracy,mean_TestMacroF1
+handcrafted SVM lambda=0.001,1,0.638194,0.599292,0.625149,0.585562
+deep SVM lambda=0.001,1,0.869433,0.854721,0.86174,0.848894
+deep SVM lambda=0.01,1,0.874924,0.863104,0.859952,0.854444
+ResNet18 frozen + trained head,1,0.902379,0.895558,0.898093,0.888976

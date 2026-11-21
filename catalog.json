@@ -271,5 +271,47 @@
     "name": "题库工坊",
     "group": "software",
     "tier": "featured"
+  },
+  {
+    "id": "P40",
+    "slug": "adaptive-dehazing",
+    "name": "场景感知自适应去雾",
+    "group": "vision",
+    "tier": "project"
+  },
+  {
+    "id": "P41",
+    "slug": "fingerprint-feature-extraction",
+    "name": "指纹预处理与特征提取",
+    "group": "vision",
+    "tier": "project"
+  },
+  {
+    "id": "P42",
+    "slug": "construction-ppe-detection",
+    "name": "施工安全穿戴检测",
+    "group": "vision",
+    "tier": "project"
+  },
+  {
+    "id": "P43",
+    "slug": "tomato-ripeness-counting",
+    "name": "番茄成熟阶段检测与数量统计",
+    "group": "vision",
+    "tier": "project"
+  },
+  {
+    "id": "P44",
+    "slug": "flower-recognition-retrieval",
+    "name": "花卉图像识别与检索",
+    "group": "vision",
+    "tier": "project"
+  },
+  {
+    "id": "P45",
+    "slug": "shelf-inventory-counting",
+    "name": "货架商品盘点",
+    "group": "vision",
+    "tier": "project"
   }
 ]

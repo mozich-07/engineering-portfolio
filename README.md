@@ -31,6 +31,12 @@
 | P07 | [ESP32-S3 桌面互动机器人｜毕设](projects/esp32s3-desktop-robot/) | 嵌入式与机器人 | 项目文档 |
 | P37 | [ESP32-C3 桌面机器人](projects/esp32c3-desktop-robot/) | 嵌入式与机器人 | 项目文档 |
 | P38 | [毕业生就业信息管理系统](projects/graduate-information-system/) | 软件工具 | 项目文档 |
+| P40 | [场景感知自适应去雾](projects/adaptive-dehazing/) | 视觉算法 | 实验结果与说明 |
+| P41 | [指纹预处理与特征提取](projects/fingerprint-feature-extraction/) | 视觉算法 | 实验结果与说明 |
+| P42 | [施工安全穿戴检测](projects/construction-ppe-detection/) | 视觉算法 | 实验结果与说明 |
+| P43 | [番茄成熟阶段检测与数量统计](projects/tomato-ripeness-counting/) | 视觉算法 | 实验结果与说明 |
+| P44 | [花卉图像识别与检索](projects/flower-recognition-retrieval/) | 视觉算法 | 实验结果与说明 |
+| P45 | [货架商品盘点](projects/shelf-inventory-counting/) | 视觉算法 | 实验结果与说明 |
 
 ## 学习与归档
 
@@ -56,4 +62,4 @@
 | P33 | [模拟信号发生器](projects/signal-generator-lab/) | 电子电路与测量 | 项目文档 |
 | P35 | [硬件课程设计合集](projects/course-design-index/) | 电子电路与测量 | 项目文档 |
 
-同源课题与课程索引保留关联编号。仓库的 39 个条目包含学习与归档记录。[项目维护规范](docs/project-standard.md)
+同源课题与课程索引保留关联编号。仓库的 45 个条目包含学习与归档记录。[项目维护规范](docs/project-standard.md)
