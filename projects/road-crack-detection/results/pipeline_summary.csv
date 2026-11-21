@@ -1,0 +1,2 @@
+Images,TruthBoxes,CandidateBoxes,LocalizationPrecisionIoU03,LocalizationRecallIoU03,LocalizedCorrectClassRecall
+60,171,298,0.0402684563758389,0.0701754385964912,0.0292397660818713

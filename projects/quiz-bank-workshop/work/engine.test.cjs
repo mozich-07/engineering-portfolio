@@ -1,0 +1,13 @@
+const E=require('./engine.js'),assert=require('node:assert/strict');
+let tests=0;function test(name,fn){fn();tests++;console.log('PASS',name);}
+test('ID-based score, full denominator, skipped questions',()=>assert.deepEqual(E.totals({ids:['dk_q1','xf_q2','not-done'],answers:{dk_q1:{ok:true},xf_q2:{ok:false}}}),{total:3,answered:2,right:1,wrong:1,unanswered:1,score:33,accuracy:50}));
+test('multi-select canonical scoring and repeated error history',()=>{const stats={};assert.equal(E.record(stats,'x','CA','AC'),true);assert.equal(E.record(stats,'x','A','AC'),false);assert.equal(stats.x.active,true);E.record(stats,'x','AC','AC');assert.equal(stats.x.active,true);E.record(stats,'x','AC','AC');assert.equal(stats.x.active,false);assert.equal(stats.x.everWrong,true);E.record(stats,'x','B','AC');assert.equal(stats.x.active,true);assert.equal(stats.x.streak,0);assert.equal(stats.x.wrong,2);});
+test('Chinese types, inline options, true/false, missing answer',()=>{const p=E.parse('一、单选题\n1. 示例\nA. 一 B. 二\n答案：B\n解析：测试\n多选题\n2、测试多选\nA. 一\nB. 二\n答案：AB\n判断题\n3. 一周七天。\n答案：正确\n单选题\n4. 缺答案\nA. 一\nB. 二');assert.equal(p.questions.length,4);assert.deepEqual(p.questions.map(q=>q.ans),['B','AB','A','']);assert.equal(p.questions[0].note,'测试');assert.equal(p.questions[3].errors.length,1);});
+test('separate answer key',()=>{const p=E.parse('1. 第一题\nA. 甲\nB. 乙\n2. 第二题\nA. 甲\nB. 乙\n参考答案\n1. B 2. A');assert.deepEqual(p.questions.map(q=>q.ans),['B','A']);});
+test('conflicting key requires review',()=>{const p=E.parse('1. 第一题\nA. 甲\nB. 乙\n答案：A\n参考答案\n1. B');assert.ok(p.questions[0].errors.includes('正文答案与答案表冲突'));});
+test('images remain associated with question and option',()=>{const p=E.parse('1. 配图 [[IMG:0]]\nA. 甲 [[IMG:1]]\nB. 乙\n答案：A',['image0','image1']);assert.deepEqual(p.questions[0].media,['image0']);assert.deepEqual(p.questions[0].opts[0].images,['image1']);});
+test('duplicate detection and conflicts',()=>{const p=E.parse('1. 同题\nA. 甲\nB. 乙\n答案：A\n2. 同题\nA. 甲\nB. 乙\n答案：A');assert.equal(p.duplicates,1);assert.equal(p.questions[1].duplicate,true);const c=E.parse('1. 同题\nA. 甲\nB. 乙\n答案：A\n2. 同题\nA. 甲\nB. 乙\n答案：B');assert.ok(c.questions.every(q=>q.errors.includes('重复题答案冲突')));});
+test('fullwidth and inline answers',()=>{const p=E.parse('１．测试 Ａ．一 Ｂ．二 答案：Ｂ');assert.equal(p.questions.length,1);assert.equal(p.questions[0].ans,'B');assert.equal(p.questions[0].opts.length,2);});
+test('unknown answer never guessed',()=>{const p=E.parse('1. 测试\nA. 甲\nB. 乙\n答案：不确定');assert.equal(p.questions[0].ans,'');assert.ok(p.questions[0].errors.length);});
+test('explicit multi-select with one correct option preserved',()=>{const p=E.parse('多选题\n1. 测试\nA. 甲\nB. 乙\n答案：A');assert.equal(p.questions[0].kind,'multi');});
+console.log(tests+' tests passed');

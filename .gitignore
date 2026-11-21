@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+__pycache__/
+.venv/
+.pio/
+.vscode/
+node_modules/
+dist/
+build/
+outputs/
+**/work/exported-twine.html
+**/work/twine-published.html

@@ -1,0 +1,275 @@
+[
+  {
+    "id": "P01",
+    "slug": "quadruped-robot",
+    "name": "灵眸云控｜四足巡检机器人",
+    "group": "embedded",
+    "tier": "featured"
+  },
+  {
+    "id": "P02",
+    "slug": "road-crack-detection",
+    "name": "道路裂缝检测与形态分类",
+    "group": "vision",
+    "tier": "featured"
+  },
+  {
+    "id": "P03",
+    "slug": "accessible-water-dispenser",
+    "name": "无碍智饮｜无障碍饮水机",
+    "group": "embedded",
+    "tier": "featured"
+  },
+  {
+    "id": "P04",
+    "slug": "powerpet-ups",
+    "name": "PowerPet｜UPS 状态显示",
+    "group": "embedded",
+    "tier": "project"
+  },
+  {
+    "id": "P05",
+    "slug": "multi-robot-research",
+    "name": "多足机器人集群课题",
+    "group": "embedded",
+    "tier": "project"
+  },
+  {
+    "id": "P06",
+    "slug": "smart-aquarium",
+    "name": "智能养鱼管家",
+    "group": "embedded",
+    "tier": "project"
+  },
+  {
+    "id": "P07",
+    "slug": "esp32s3-desktop-robot",
+    "name": "ESP32-S3 桌面互动机器人｜毕设",
+    "group": "embedded",
+    "tier": "project"
+  },
+  {
+    "id": "P08",
+    "slug": "stm32-desktop-pet",
+    "name": "STM32 桌面宠物机器人",
+    "group": "embedded",
+    "tier": "project"
+  },
+  {
+    "id": "P09",
+    "slug": "image-watermark-lab",
+    "name": "图片盲水印实验",
+    "group": "vision",
+    "tier": "project"
+  },
+  {
+    "id": "P10",
+    "slug": "weld-wire-counter",
+    "name": "焊丝端面识别与计数",
+    "group": "vision",
+    "tier": "project"
+  },
+  {
+    "id": "P11",
+    "slug": "bead-pattern-generator",
+    "name": "照片转拼豆图纸",
+    "group": "vision",
+    "tier": "project"
+  },
+  {
+    "id": "P12",
+    "slug": "image-contrast-lab",
+    "name": "图像直方图与对比度增强",
+    "group": "vision",
+    "tier": "project"
+  },
+  {
+    "id": "P13",
+    "slug": "optical-dispersion-compensation",
+    "name": "光纤通信色散补偿",
+    "group": "vision",
+    "tier": "project"
+  },
+  {
+    "id": "P14",
+    "slug": "image-deblurring-lab",
+    "name": "图像锐化与模糊复原",
+    "group": "vision",
+    "tier": "project"
+  },
+  {
+    "id": "P15",
+    "slug": "line-following-car",
+    "name": "循迹小车",
+    "group": "embedded",
+    "tier": "lab"
+  },
+  {
+    "id": "P16",
+    "slug": "robot-arm-lab",
+    "name": "机械臂实践",
+    "group": "embedded",
+    "tier": "lab"
+  },
+  {
+    "id": "P17",
+    "slug": "touch-led-lamp",
+    "name": "触控调光灯",
+    "group": "embedded",
+    "tier": "lab"
+  },
+  {
+    "id": "P18",
+    "slug": "mcs51-peripheral-labs",
+    "name": "51 单片机外设练习",
+    "group": "embedded",
+    "tier": "lab"
+  },
+  {
+    "id": "P19",
+    "slug": "stm32-peripheral-labs",
+    "name": "STM32 外设练习",
+    "group": "embedded",
+    "tier": "lab"
+  },
+  {
+    "id": "P20",
+    "slug": "python-utilities",
+    "name": "Python 脚本与小工具",
+    "group": "software",
+    "tier": "lab"
+  },
+  {
+    "id": "P21",
+    "slug": "fdm-printing-lab",
+    "name": "3D 打印与结构建模",
+    "group": "fabrication",
+    "tier": "lab"
+  },
+  {
+    "id": "P22",
+    "slug": "laser-cutting-lab",
+    "name": "激光切割实践",
+    "group": "fabrication",
+    "tier": "lab"
+  },
+  {
+    "id": "P23",
+    "slug": "soldering-kits",
+    "name": "焊接套件与练习",
+    "group": "fabrication",
+    "tier": "lab"
+  },
+  {
+    "id": "P24",
+    "slug": "metalworking-practice",
+    "name": "金工实习",
+    "group": "fabrication",
+    "tier": "lab"
+  },
+  {
+    "id": "P25",
+    "slug": "cad-design",
+    "name": "CAD 制图与建模",
+    "group": "fabrication",
+    "tier": "lab"
+  },
+  {
+    "id": "P26",
+    "slug": "pcb-design-lab",
+    "name": "PCB 绘制练习",
+    "group": "embedded",
+    "tier": "lab"
+  },
+  {
+    "id": "P27",
+    "slug": "contest-programming-lab",
+    "name": "蓝桥杯程序设计练习",
+    "group": "software",
+    "tier": "lab"
+  },
+  {
+    "id": "P28",
+    "slug": "creative-lamp",
+    "name": "创意灯具",
+    "group": "fabrication",
+    "tier": "lab"
+  },
+  {
+    "id": "P29",
+    "slug": "dev-board-labs",
+    "name": "开发板综合练习",
+    "group": "embedded",
+    "tier": "lab"
+  },
+  {
+    "id": "P30",
+    "slug": "digital-oscilloscope-kit",
+    "name": "便携式数字示波器装调",
+    "group": "electronics",
+    "tier": "project"
+  },
+  {
+    "id": "P31",
+    "slug": "fm-transmitter-lab",
+    "name": "FM 无线传声器",
+    "group": "electronics",
+    "tier": "lab"
+  },
+  {
+    "id": "P32",
+    "slug": "digital-clock-lab",
+    "name": "数字电子钟",
+    "group": "electronics",
+    "tier": "lab"
+  },
+  {
+    "id": "P33",
+    "slug": "signal-generator-lab",
+    "name": "模拟信号发生器",
+    "group": "electronics",
+    "tier": "lab"
+  },
+  {
+    "id": "P34",
+    "slug": "image-cartoonization",
+    "name": "照片卡通化",
+    "group": "vision",
+    "tier": "project"
+  },
+  {
+    "id": "P35",
+    "slug": "course-design-index",
+    "name": "硬件课程设计合集",
+    "group": "electronics",
+    "tier": "lab"
+  },
+  {
+    "id": "P36",
+    "slug": "trafficlight-controller",
+    "name": "路畅 TrafficLight｜双向互斥交通灯",
+    "group": "embedded",
+    "tier": "featured"
+  },
+  {
+    "id": "P37",
+    "slug": "esp32c3-desktop-robot",
+    "name": "ESP32-C3 桌面机器人",
+    "group": "electronics",
+    "tier": "project"
+  },
+  {
+    "id": "P38",
+    "slug": "graduate-information-system",
+    "name": "毕业生就业信息管理系统",
+    "group": "software",
+    "tier": "project"
+  },
+  {
+    "id": "P39",
+    "slug": "quiz-bank-workshop",
+    "name": "题库工坊",
+    "group": "software",
+    "tier": "featured"
+  }
+]
