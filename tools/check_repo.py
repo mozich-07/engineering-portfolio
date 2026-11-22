@@ -31,6 +31,11 @@ for page in sorted(public_pages):
     links = re.findall(r'\]\(([^()]+)\)|<img\b[^>]*\bsrc="([^"]+)"', content)
     for markdown, image in links:
         link = urlsplit(markdown or image)
+        if link.netloc == "raw.githubusercontent.com" and link.path.startswith("/mozich-07/engineering-portfolio/main/"):
+            asset = root / link.path.removeprefix("/mozich-07/engineering-portfolio/main/")
+            assert asset.is_file(), asset
+            outgoing[page].add(asset)
+            continue
         if link.scheme or not link.path:
             continue
         dest = (page.parent / link.path).resolve()

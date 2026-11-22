@@ -4,6 +4,6 @@
 
 ![祝福便签（网页）运行画面](../assets/gallery/notes-web.png)
 
-[下载网页，在浏览器中打开](../demos/notes.html?raw=true) · [查看 HTML 与动画逻辑](../demos/notes.html)
+[下载网页，在浏览器中打开](https://raw.githubusercontent.com/mozich-07/engineering-portfolio/main/collections/software/demos/notes.html) · [查看 HTML 与动画逻辑](../demos/notes.html)
 
 [图形作品索引](python-utilities.md) · [作品集首页](../../../)

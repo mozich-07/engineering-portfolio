@@ -12,7 +12,7 @@
 
 ![焊丝端面的 PR 曲线，蓝线贴近图框顶部，在高召回端靠近右边缘](assets/pr-preview.jpg)
 
-横轴是召回率，纵轴是精确率。蓝线大部分贴着图框上沿，图例给出的 AP@0.5 为 0.995。这个值评价检测框；前文的 46/48 才是整张照片计数完全一致的比例。[打开原始 PNG 大图](assets/precision-recall.png?raw=true)
+横轴是召回率，纵轴是精确率。蓝线大部分贴着图框上沿，图例给出的 AP@0.5 为 0.995。这个值评价检测框；前文的 46/48 才是整张照片计数完全一致的比例。[打开原始 PNG 大图](https://raw.githubusercontent.com/mozich-07/engineering-portfolio/main/projects/weld-wire-counter/assets/precision-recall.png)
 
 原工程的[推理与后处理](src/engine.py)、[训练脚本](src/train.py)、[导出脚本](src/export_model.py)和[部署权重](models/best.onnx)可以分别查看。推理入口默认采用原图识别。模型基于 Ultralytics YOLOv8n。[上游框架](https://github.com/ultralytics/ultralytics) · [许可](LICENSE-AGPL-3.0.txt)
 
