@@ -19,3 +19,10 @@
 **成果记录。** 我独立申请的实用新型《一种用于饮水机的桶装水更换辅助装置》于 2026 年 3 月受理。团队另发表了关于手势与语音双模取水的会议论文，我为第四作者，承担结构图绘制和部分章节撰写。[论文题录与 DOI](https://doi.org/10.1007/978-981-95-7928-0_12)
 
 [换桶机构的 CAD 附图](../../collections/mechanical/drawings/bottle-tray.dwg) · [三套滨水总平面和支座模型](../../collections/mechanical/)
+
+
+## 论文与专利申请文件
+
+会议论文发表于 Springer 的 *Proceedings of the 2nd Electrical Artificial Intelligence Conference, Volume 3*（2026）。我列第四作者，绘制结构图并参与部分章节写作。[出版页面与作者顺序](https://doi.org/10.1007/978-981-95-7928-0_12)
+
+换桶辅助装置由我独立申请实用新型，申请号 **202620256909.1**，受理日期为 **2026 年 3 月 3 日**。阅读图纸时可以先找托板（3）、升降块（4）和驱动组件（5），再对照权利要求 1 看三者如何配合。[申请摘要、权利要求与说明书](documents/application-text.pdf) · [摘要附图与结构详图](documents/application-figures.pdf) · [受理通知书节选](assets/application-receipt-excerpt.png)

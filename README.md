@@ -1,6 +1,19 @@
 # 孙靖凯 · 电子信息工程作品集
 
-我做过桌面交互机器人，包含舵机驱动、显示适配和交互动作设计；也做过通过识别摄像头前的手势，实时在屏幕上做相应的交互显示；做机器学习项目时，我更关心另一个问题：模型换一批图还能不能用？下面三条线分别记录这些项目文件，并讲述怎样做出来（以便未来进一步做出修改和改进）
+我是孙靖凯，电子信息工程专业。我做视觉检测时会把错判的样本留下来，做硬件时也会保存装配照片和实测波形。这里整理了从数据和电路图到实验结果的过程，项目页可以直接查看代码、图纸和运行画面。
+
+## 按能力看作品
+
+| 想了解的能力 | 从哪件作品开始 |
+| --- | --- |
+| 视觉算法与实验设计 | [道路裂缝检测](projects/road-crack-detection/)比较 CNN 与传统特征在内外部样本上的差异。[焊丝计数](projects/weld-wire-counter/)把模型导出为 ONNX，在 CPU 上逐图核对检测框和根数。 |
+| 图像处理与实时交互 | [场景去雾](projects/adaptive-dehazing/)用清晰参考图评估恢复效果。[摄像头手势](projects/camera-hand-interaction/)有连续实录，可以看到手部动作如何改变粒子。 |
+| 嵌入式与板级调试 | [STM32 → PowerPet → ESP32-C3 → ESP32-S3](projects/desktop-robot-evolution/)记录从驱动舵机到联网语音交互的演变。[四足机器人](projects/quadruped-robot/)展示双层 PCB、装机和八路舵机标定。[电子实物](collections/electronics/)收录焊接板与示波器实拍。 |
+| 机械制图与结构设计 | [CAD 与 SolidWorks](collections/mechanical/)可以下载 DWG、查看三维模型。[换桶装置](projects/accessible-water-dispenser/)可以沿着申请附图理解螺杆和托板的运动。 |
+| 文献阅读与技术写作 | [无障碍饮水机会议论文及实用新型申请文件](projects/accessible-water-dispenser/#论文与专利申请文件)分别记录团队论文中的分工和我的结构设计。[11 份传感器设计](collections/sensing/#十一个传感器设计)附选型、计算和参考资料。 |
+| 项目整理与可复现性 | [裂缝指标复算脚本](projects/road-crack-detection/verify_results.m)能从原始计数复算 F1 和 IoU。[仓库维护约定](docs/project-standard.md)和[自动检查](.github/workflows/verify.yml)记录项目怎样归档、验证链接、测试程序和编译固件。 |
+
+## 三条项目主线
 
 | [桌面机器人的四次迭代](projects/desktop-robot-evolution/) | [机器学习 · 从道路裂缝检测开始](collections/ml/) | [数字图像处理与摄像头识别](collections/imaging/) |
 | --- | --- | --- |
