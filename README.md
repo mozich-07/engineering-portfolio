@@ -6,6 +6,7 @@
 
 | 想了解的能力 | 从哪件作品开始 |
 | --- | --- |
+| 农业图像与计数 | [番茄成熟度检测](projects/tomato-ripeness-counting/)把果实分为三个成熟阶段，在 145 张测试照片上逐图核对数量。微调后平均每图绝对计数误差由 3.77 个降至 2.48 个。 |
 | 视觉算法与实验设计 | [道路裂缝检测](projects/road-crack-detection/)比较 CNN 与传统特征在内外部样本上的差异。[焊丝计数](projects/weld-wire-counter/)把模型导出为 ONNX，在 CPU 上逐图核对检测框和根数。 |
 | 图像处理与实时交互 | [场景去雾](projects/adaptive-dehazing/)用清晰参考图评估恢复效果。[摄像头手势](projects/camera-hand-interaction/)有连续实录，可以看到手部动作如何改变粒子。 |
 | 嵌入式与板级调试 | [STM32 → PowerPet → ESP32-C3 → ESP32-S3](projects/desktop-robot-evolution/)记录从驱动舵机到联网语音交互的演变。[四足机器人](projects/quadruped-robot/)展示双层 PCB、装机和八路舵机标定。[电子实物](collections/electronics/)收录焊接板与示波器实拍。 |
