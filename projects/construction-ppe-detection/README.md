@@ -19,4 +19,14 @@ python -m pip install -r requirements.txt
 python src/predict.py photo.jpg
 ```
 
+## 一张容易判断的图和一个失败案例
+
+![安全帽、反光衣与人员框](assets/equipment-match.jpg)
+
+画面中只有一名主要人物，可以直接对照装备框和人员框的位置。
+
+![多人共伞时的漏检与合框](assets/shared-umbrella.jpg)
+
+雨伞遮住上半身，多个人在画面里重叠。右图把相邻的人合进了一个框，这时也就难以把装备归到具体人员。
+
 [机器学习项目](../../collections/ml/) · [作品集首页](../../)

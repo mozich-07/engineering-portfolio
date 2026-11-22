@@ -1,12 +1,10 @@
-function demo
+function result = demo()
+% Run the scene-aware algorithm on the credited lake photograph.
 root = fileparts(mfilename('fullpath'));
-addpath(fullfile(root,'src'));
-input = imread(fullfile(root,'..','..','collections','electronics','assets','signal-generator.jpg'));
-reference = im2double(imresize(input,[300 NaN]));
-hazy = synthesize_haze(reference,1.25,17,'nonuniform');
-r = dehaze_v2(hazy);
-separator = ones(size(reference,1),5,3);
-strip = [reference separator hazy separator r.final];
-imshow(strip);
-imwrite(strip,fullfile(root,'assets','controlled-example.jpg'),'Quality',90);
+addpath(fullfile(root, 'src'));
+result = adaptive_dehaze_image(imread(fullfile(root, 'assets', 'lake-fog.jpg')));
+if nargout == 0
+    montage({result.input, result.final}, 'Size', [1 2]);
+    title('Input / Adaptive fusion');
+end
 end

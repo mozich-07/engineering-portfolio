@@ -12,44 +12,21 @@ function result = adaptive_dehaze_image(inputImage, options)
 
 if nargin < 2, options = struct(); end
 cfg = defaultOptions(options);
-validateattributes(inputImage, {'uint8','uint16','single','double','logical'}, ...
-    {'nonempty','real','finite','nonsparse'},mfilename,'inputImage');
-if ndims(inputImage)>3 || (~ismatrix(inputImage) && size(inputImage,3)~=3) ...
-        || min(size(inputImage,1),size(inputImage,2))<3
-    error('Dehaze:Input','请输入至少 3×3 的灰度图或 RGB 图。');
-end
-if isfloat(inputImage) && (min(inputImage(:))<0 || max(inputImage(:))>1)
-    error('Dehaze:Range','浮点图像必须位于 [0,1]，请先使用 im2double。');
-end
 rgb = normalizeRgb(im2double(inputImage));
 gray = rgb2gray(rgb);
 
-[hazeScore, features, darkChannel] = estimateHaze(rgb, gray, cfg);
-% A spatially constant image contains no recoverable structure. Retinex
-% percentile normalization would otherwise invent a brightness change.
-channelRange = squeeze(max(max(rgb,[],1),[],2)-min(min(rgb,[],1),[],2));
-if all(channelRange < 1e-12)
-    result = struct('input',rgb,'final',rgb,'retinex',rgb,'dcp',rgb, ...
-        'hazeScore',hazeScore,'hazeLevel',hazeLabel(hazeScore), ...
-        'sceneType','纯色或无纹理场景','features',features, ...
-        'darkChannel',darkChannel,'transmissionRaw',ones(size(gray)), ...
-        'transmission',ones(size(gray)),'illumination',max(rgb,[],3), ...
-        'skyConfidence',zeros(size(gray)),'fusionWeight',zeros(size(gray)), ...
-        'atmosphericLight',reshape(rgb(1,1,:),1,3), ...
-        'options',cfg,'status','无可恢复纹理，保持输入');
-    return;
-end
+[hazeScore, features] = estimateHaze(rgb, gray, cfg);
 skyConfidence = estimateSkyConfidence(rgb, gray, cfg);
 [retinexImage, illumination] = retinexBranch(rgb, hazeScore, cfg);
 [dcpImage, darkChannel, transmissionRaw, transmission, atmosphere] = ...
-    dcpBranch(rgb, hazeScore, cfg, darkChannel);
+    dcpBranch(rgb, hazeScore, cfg);
 
 % Dense haze and textured non-sky regions benefit more from DCP. Smooth,
 % bright upper regions are protected by the Retinex branch.
 gradientMap = imgradient(gray, 'sobel');
 edgeConfidence = robustNormalize(gradientMap, 5, 95);
 globalDcpWeight = 0.18 + 0.52 * hazeScore;
-fusionWeight = globalDcpWeight .* (1 - cfg.skyProtection * skyConfidence) .* ...
+fusionWeight = globalDcpWeight .* (1 - 0.78 * skyConfidence) .* ...
     (0.78 + 0.22 * edgeConfidence);
 fusionWeight = guidedSmooth(fusionWeight, gray, cfg.fusionRadius, 0.01);
 fusionWeight = min(max(fusionWeight, 0.05), 0.78);
@@ -85,8 +62,6 @@ result.illumination = illumination;
 result.skyConfidence = skyConfidence;
 result.fusionWeight = fusionWeight;
 result.atmosphericLight = atmosphere;
-result.options = cfg;
-result.status = '处理完成';
 end
 
 function cfg = defaultOptions(options)
@@ -96,29 +71,9 @@ cfg.guidedRadius = 8;
 cfg.fusionRadius = 10;
 cfg.epsilon = 1e-6;
 cfg.clipLimit = 0.006;
-cfg.skyProtection = 0.78;
-if ~isstruct(options) || ~isscalar(options)
-    error('Dehaze:Options','options 必须是标量结构体。');
-end
 names = fieldnames(options);
 for i = 1:numel(names)
-    if ~isfield(cfg,names{i}) && ~strcmp(names{i},'darkPatchSize')
-        error('Dehaze:Options','未知参数：%s',names{i});
-    end
     cfg.(names{i}) = options.(names{i});
-end
-validateattributes(cfg.retinxScales,{'numeric'},{'vector','nonempty','real','finite','positive','<=',1});
-validateattributes(cfg.retinexWeights,{'numeric'},{'vector','nonempty','real','finite','nonnegative'});
-if numel(cfg.retinxScales)~=numel(cfg.retinexWeights) || abs(sum(cfg.retinexWeights)-1)>1e-9
-    error('Dehaze:Options','Retinex 尺度与权重必须等长，权重之和须为 1。');
-end
-validateattributes(cfg.guidedRadius,{'numeric'},{'scalar','integer','>=',1,'<=',100});
-validateattributes(cfg.fusionRadius,{'numeric'},{'scalar','integer','>=',1,'<=',100});
-validateattributes(cfg.epsilon,{'numeric'},{'scalar','real','finite','positive','<=',0.01});
-validateattributes(cfg.clipLimit,{'numeric'},{'scalar','real','finite','>',0,'<=',1});
-validateattributes(cfg.skyProtection,{'numeric'},{'scalar','real','finite','>=',0,'<=',1});
-if isfield(cfg,'darkPatchSize')
-    validateattributes(cfg.darkPatchSize,{'numeric'},{'scalar','integer','>=',3,'<=',101});
 end
 end
 
@@ -134,7 +89,7 @@ rgb(~isfinite(rgb)) = 0;
 rgb = min(max(rgb, 0), 1);
 end
 
-function [score, f, dark] = estimateHaze(rgb, gray, cfg)
+function [score, f] = estimateHaze(rgb, gray, cfg)
 dark = localDarkChannel(rgb, cfg);
 hsvImage = rgb2hsv(rgb);
 f.luminanceSpread = prctile(gray(:), 95) - prctile(gray(:), 5);
@@ -205,7 +160,7 @@ for i = 1:numel(cfg.retinxScales)
 end
 response = 0.78 * responseFine + 0.22 * responseGuided;
 newValue = robustNormalize(response, 1, 99);
-local = adapthisteq(newValue, 'NumTiles', tileCount(newValue), ...
+local = adapthisteq(newValue, 'NumTiles', [8 8], ...
     'ClipLimit', min(0.012, cfg.clipLimit * (0.75 + 0.55 * hazeScore)));
 newValue = (0.88 - 0.10 * hazeScore) * newValue + ...
     (0.12 + 0.10 * hazeScore) * local;
@@ -220,7 +175,8 @@ output = min(max(output, 0), 1);
 end
 
 function [output, dark, rawTransmission, transmission, atmosphere] = ...
-        dcpBranch(rgb, hazeScore, cfg, dark)
+        dcpBranch(rgb, hazeScore, cfg)
+dark = localDarkChannel(rgb, cfg);
 [~, order] = sort(dark(:), 'descend');
 topCount = max(1, round(0.001 * numel(dark)));
 pixels = reshape(rgb, [], 3);
@@ -242,7 +198,7 @@ end
 function output = restrainedLocalContrast(rgb, hazeScore, cfg)
 hsvImage = rgb2hsv(rgb);
 value = hsvImage(:, :, 3);
-local = adapthisteq(value, 'NumTiles', tileCount(value), ...
+local = adapthisteq(value, 'NumTiles', [8 8], ...
     'ClipLimit', min(0.010, cfg.clipLimit * (0.65 + 0.55 * hazeScore)));
 strength = 0.05 + 0.10 * hazeScore;
 hsvImage(:, :, 3) = (1 - strength) * value + strength * local;
@@ -259,15 +215,12 @@ output = rgb .* reshape(gain, 1, 1, 3);
 end
 
 function q = guidedSmooth(input, guide, radius, epsValue)
-radius = min(radius, floor((min(size(input))-2)/2));
-if radius<1, q=input; return; end
 if exist('imguidedfilter', 'file') == 2
     side = 2 * radius + 1;
     q = imguidedfilter(input, guide, 'NeighborhoodSize', [side side], ...
         'DegreeOfSmoothing', epsValue);
     return;
 end
-
 kernel = ones(2 * radius + 1) / (2 * radius + 1)^2;
 meanGuide = imfilter(guide, kernel, 'replicate');
 meanInput = imfilter(input, kernel, 'replicate');
@@ -278,10 +231,6 @@ a = covariance ./ (variance + epsValue);
 b = meanInput - a .* meanGuide;
 q = imfilter(a, kernel, 'replicate') .* guide + ...
     imfilter(b, kernel, 'replicate');
-end
-
-function count = tileCount(image)
-count = max([2 2], min([8 8], floor(size(image)/2)));
 end
 
 function value = robustNormalize(image, lowPercent, highPercent)

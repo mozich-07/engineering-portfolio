@@ -10,4 +10,14 @@
 
 在 MATLAB 的项目目录执行 `addpath('src'); s = load('models/quality_model.mat'); r = fp_process('input.png',s.model);`。返回的 `r.skeleton` 是骨架图，`r.points` 给出候选及筛选标志。公开材料保留模型和汇总结果，真实指纹原图可按发布方条件取得。[SOCOFing 数据说明](https://arxiv.org/abs/1807.10609)
 
+## 遮挡处为什么容易多出端点
+
+![遮挡样本的方向场、骨架与候选点](assets/occlusion.jpg)
+
+沿遮挡边缘看，原本连续的纹线会中断。右下角把候选位置叠回图像，便于逐点复核。
+
+![颗粒干扰下的处理结果](assets/noise.jpg)
+
+颗粒还会形成短而碎的纹线。比较两幅图中候选点的分布，就能看出噪声怎样影响细节点提取。
+
 [图像处理与摄像头识别](../../collections/imaging/) · [机器学习项目](../../collections/ml/) · [作品集首页](../../)

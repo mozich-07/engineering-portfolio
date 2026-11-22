@@ -21,4 +21,10 @@ test_project(output);
 
 [信道及实验参数](src/fiber_config.m) · [岭回归训练](src/fit_ridge.m)
 
+## 均衡器用了多少训练样本
+
+![训练样本量与训练、验证 NMSE 的关系](assets/sample-learning.jpg)
+
+横轴改变用于拟合的样本数。样本少时训练与验证误差相差较大，随着样本增加，两条曲线逐渐靠近。
+
 [机器学习项目](../../collections/ml/) · [作品集首页](../../)

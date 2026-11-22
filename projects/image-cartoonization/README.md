@@ -10,4 +10,14 @@
 
 在 MATLAB 运行 `addpath('src'); a = cartoon_process(imread('examples/cat.jpg'),cartoon_defaults('comic')); imshow(a.Result)`。可将 `comic` 改为 `sketch` 对照。原程序还提供[单张预览](run_project.m)、[批处理](run_batch.m)和[处理函数](src/cartoon_process.m)。
 
+## 街道电车的线条和色块
+
+| 保边平滑 | 提取轮廓 |
+| --- | --- |
+| ![电车照片平滑后](assets/tram-smooth.jpg) | ![车窗、建筑和路面的边线](assets/tram-edge.jpg) |
+| **颜色量化** | **漫画合成** |
+| ![简化后的街景色块](assets/tram-color.jpg) | ![将轮廓叠回色块](assets/tram-result.jpg) |
+
+看黄色车身最直观：颜色量化把相近的黄合到一起，轮廓图则保留车窗边界。两者叠回后，车身简化了，窗格仍然清楚。系列图是原工程保存的处理步骤。[样图来源与许可](examples/CREDITS.md)
+
 [图像处理与摄像头识别](../../collections/imaging/) · [作品集首页](../../)

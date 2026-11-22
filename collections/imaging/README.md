@@ -36,7 +36,7 @@
 | 实验 | 我比较了什么 |
 | --- | --- |
 | [暗光增强](../../projects/image-contrast-lab/) | 同一张暗光图上，全局直方图均衡把平均亮度从 0.262 提到 0.508，CLAHE 提到 0.324。两种方法对亮度、色偏和高光截断的影响不同。[逐场景指标](data/contrast.csv) |
-| [图像去雾](../../projects/adaptive-dehazing/) | 在开发集的 29 个真实雾案例中，V2 的平均 SSIM 从输入图的 0.487 提升到 0.652。表中还可按场景条件比较 CLAHE 和暗通道方法。[分组结果](data/dehazing.csv) |
+| [场景感知自适应去雾](../../projects/adaptive-dehazing/) | 9 张雾图分别比较 Retinex、暗通道和自适应融合；另用同一张清晰图合成轻、中、浓雾，检查细节恢复程度。[三档雾的配对指标](../../projects/adaptive-dehazing/results/paired_metrics.csv) |
 | [模糊复原](../../projects/image-deblurring-lab/) | 180 个案例中，残差回归让平均 PSNR 从 23.79 dB 提升到 25.77 dB，SSIM 却从 0.751 降到 0.746。两种指标对复原效果给出了不同评价。[各方法对照](data/deblurring.csv) |
 | [指纹特征](../../projects/fingerprint-feature-extraction/) | 比较灰尘、遮挡、模糊对纹线端点与分叉点提取的影响，按干扰条件统计筛选前后的候选数量。[细节点统计](data/fingerprint.csv) |
 
@@ -52,8 +52,7 @@
 
 ## 盲水印与照片卡通化
 
-我比较了变换域 DWT-DCT-SVD 和像素最低有效位 LSB 两条水印路线。实验分开记录嵌入后图像的变化和处理后能否提取信息。下面是原工程保存的汇总图。
-
-![两种水印方法的实验对照](assets/watermark.png)
-
-照片卡通化项目把保边滤波、边缘提取与颜色量化串起来。同一张照片可以改变颜色层次数，观察色块的简化程度和轮廓是否保留。原工程提供单张预览和批量输出。
+| 盲水印 · 压缩后的咖啡照片 | 照片卡通化 · 街景轮廓合成 |
+| --- | --- |
+| ![嵌入文字并经 JPEG 压缩后的咖啡](../../projects/image-watermark-lab/assets/coffee-jpeg.png) | ![量化色块与边线合成的电车街景](../../projects/image-cartoonization/assets/tram-result.jpg) |
+| 照片里嵌入的文字能否在压缩后读回来？[原图、嵌入、压缩与提取结果](../../projects/image-watermark-lab/) | 哪些细节会变成线，哪些会合成色块？[电车分步图与长毛猫的两种画法](../../projects/image-cartoonization/) |

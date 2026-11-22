@@ -19,4 +19,14 @@ python src/predict.py shelf.jpg --mode tiles
 
 原工程使用的权重修订为 `ee1b8ac34eb3b68969ffa8165e50c43457fe4e35`。数据与模型由发布方提供，使用范围见其说明。[上游权重](https://huggingface.co/chistopat/sku110k-yolo11-object-detector/tree/ee1b8ac34eb3b68969ffa8165e50c43457fe4e35) · [SKU-110K 数据](https://github.com/eg4000/SKU110K_CVPR19) · [Ultralytics 许可](LICENSE-AGPL-3.0.txt)
 
+## 从整张货架检查漏计的位置
+
+![人工框和检测框对照，双方各计 113 件](assets/count-match.jpg)
+
+这张图人工和模型都数出 113 件。两幅图并排后，还可以继续检查每个框是否对应同一件商品。
+
+![密集货架的少计样例](assets/dense-shelf.jpg)
+
+在这排紧挨着的包装中，部分商品没有独立检测框。总数的差值告诉我该回看哪张图，标注对照才显示漏在什么位置。
+
 [机器学习项目](../../collections/ml/) · [作品集首页](../../)

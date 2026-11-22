@@ -22,7 +22,24 @@
 | [灵眸云控 · 四足巡检机器人](projects/quadruped-robot/) | 绘制双层主控板，参与八路舵机标定和整机联调。可看装配模型与拆盖照片。 |
 | [无碍智饮 · 无障碍饮水机](projects/accessible-water-dispenser/) | 参与双模取水控制，独立设计换桶辅助装置。可对照控制框图、机构附图和会议论文。 |
 | [路畅 · 双向交通灯](projects/trafficlight-controller/) | 独立编写 Arduino Uno 固件。项目页有模式切换实拍、引脚表和可编译的草图。 |
-| [电子电路与测试](collections/electronics/) | 从信号发生器的焊接板到示波器上的三角波，记录装配、调试与测量。 |
+| [电子实物作品设计、焊接与调试](collections/electronics/) | 从数字钟的计数电路、信号发生器的焊接板，到示波器实测的三角波，可对照电路图、元件布局和通电结果。 |
 | [离线题库工坊](projects/quiz-bank-workshop/) | 将 Word 题库整理成可核对、可计分的离线练习工具，附解析引擎、截图和自动化测试。 |
+| [毕业生就业信息管理系统](projects/graduate-information-system/) | 单页完成就业记录的录入、筛选和修改，可导入表格，导出 Excel 或 PDF。公开版从空表开始。 |
 
-[嵌入式实践与其他设备照片](collections/embedded/) · [照片转拼豆图纸与备料示例](projects/bead-pattern-generator/) · [就业信息管理和图形程序](collections/software/)
+[嵌入式实践与其他设备照片](collections/embedded/) · [照片转拼豆图纸与备料示例](projects/bead-pattern-generator/) · [软件工具总览](collections/software/)
+
+### 网页互动与桌面绘图
+
+[手势粒子树与现场实录](projects/camera-hand-interaction/) · [可下载的祝福便签网页](collections/software/details/notes-web.md) · [桌面绘图作品索引](collections/software/details/python-utilities.md)
+
+<details>
+<summary>展开全部娱乐作品，点击名称直接看运行画面</summary>
+
+| 作品类型 | 点击作品名查看运行画面 |
+| --- | --- |
+| 网页互动与节日动画 | [跨年粒子字](collections/software/details/new-year.md) · [像素爱心](collections/software/details/pixel-heart.md) · [祝福便签（网页）](collections/software/details/notes-web.md) · [飘雪贺卡](collections/software/details/holiday-card.md) · [圣诞夜景](collections/software/details/christmas-scene.md) · [线条圣诞树](collections/software/details/outline-tree.md) · [手势粒子树](collections/software/details/gesture-tree.md) · [爱心树计时器](collections/software/details/elapsed-time.md) |
+| 桌面绘图与小动画 | [中秋月夜](collections/software/details/mid-autumn.md) · [四叶草](collections/software/details/clover-drawing.md) · [树叶](collections/software/details/leaf.md) · [樱花树](collections/software/details/cherry-tree.md) · [爱心散落](collections/software/details/scattered-hearts.md) · [生日蛋糕](collections/software/details/cake.md) · [祝福便签（桌面）](collections/software/details/notes-desktop.md) |
+| 角色绘图与像素画 | [Loopy](collections/software/details/loopy.md) · [像素维纳斯](collections/software/details/venus.md) · [像素草莓熊](collections/software/details/pixel-bear.md) · [草莓熊与玫瑰](collections/software/details/bear-rose.md) · [线条小狗](collections/software/details/dog.md) · [小猪佩奇](collections/software/details/peppa.md) · [库洛米](collections/software/details/kuromi.md) · [星之卡比](collections/software/details/kirby.md) · [篮球人物](collections/software/details/basketball.md) · [爱心小兔](collections/software/details/heart-rabbit.md) · [皮卡丘](collections/software/details/pikachu.md) · [小帕](collections/software/details/puppy-portrait.md) · [蜘蛛侠](collections/software/details/spider.md) · [蜡笔小新](collections/software/details/shin-chan.md) · [路飞线稿](collections/software/details/luffy.md) · [电影人物剪影](collections/software/details/leon.md) · [钢铁侠面罩](collections/software/details/iron-man.md) · [黑白马里奥](collections/software/details/mario.md) |
+| 桌面圣诞树系列 | [圣诞树 1](collections/software/details/desktop-tree-1.md) · [圣诞树 2](collections/software/details/desktop-tree-2.md) · [圣诞树 3](collections/software/details/desktop-tree-3.md) · [圣诞树 4](collections/software/details/desktop-tree-4.md) · [圣诞树 5](collections/software/details/desktop-tree-5.md) · [圣诞树 6](collections/software/details/desktop-tree-6.md) · [圣诞树 7](collections/software/details/desktop-tree-7.md) |
+
+</details>

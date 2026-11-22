@@ -61,6 +61,17 @@ for collection, ids in {
     for number in ids.split():
         assert by_id["P" + number] in outgoing[index], (index, number)
 
+landing = outgoing[root / "README.md"]
+for target in ("projects/quiz-bank-workshop", "projects/graduate-information-system", "collections/electronics"):
+    assert root / target / "README.md" in landing, target
+
+gallery_index = root / "collections/software/details/python-utilities.md"
+gallery = set(gallery_index.parent.glob("*.md")) - {gallery_index}
+assert gallery <= landing and gallery <= outgoing[gallery_index]
+weld = root / "projects/weld-wire-counter"
+for asset in ("assets/pr-preview.jpg", "assets/precision-recall.png"):
+    assert weld / asset in outgoing[weld / "README.md"], asset
+
 sample = json.loads((root / "projects/quiz-bank-workshop/work/banks.json").read_text(encoding="utf-8"))
 assert len(sample) == 1 and len(sample[0]["questions"]) == 2
 assert "人工样例" in sample[0]["name"]

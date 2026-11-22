@@ -10,4 +10,18 @@
 
 在 MATLAB 中运行 `addpath('src'); f = fx_features('flower.jpg');` 可以直接提取一张照片的手工特征。[特征实现](src/fx_features.m) · [分类与检索](src/fx_predict.m)。训练深度分支还需要 Oxford 数据、官方划分、Deep Learning Toolbox 和 ResNet-18 参数。工程沿用 MathWorks 的网络定义，参数放入 `models/pretrained/resnet18Params.mat`。[数据与划分](https://www.robots.ox.ac.uk/~vgg/data/flowers/102/) · [预训练参数](https://www.mathworks.com/supportfiles/nnet/data/networks/resnet18Params.mat) · [网络实现及许可](third_party/resnet18/)
 
+## 同是西番莲，分类结果也会不同
+
+![正确识别为西番莲的测试图](assets/passionflower-correct.jpg)
+
+这一张被归到第 77 类西番莲。
+
+![被误判为 bee balm 的西番莲](assets/passionflower-error.jpg)
+
+另一张同类花朵却被归到第 92 类 bee balm。照片中花瓣与放射状结构都有明显变化。
+
+![检索界面的类别候选与近邻花卉](assets/retrieval-screen.jpg)
+
+检索界面把查询照片与六张近邻并排放在一起，可以比较模型看作相似的花形和纹理。
+
 [机器学习项目](../../collections/ml/) · [作品集首页](../../)

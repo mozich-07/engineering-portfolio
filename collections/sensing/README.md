@@ -33,4 +33,4 @@
 | [超声感应开盖](details/ultrasonic-lid.md) | 回波脉宽 → 舵机动作 | [正文与原图](designs/ultrasonic-lid.pdf) |
 | [桌面距离提示](details/tof-distance.md) | 飞行时间测距 → 接近提示 | [正文与原图](designs/tof-distance.pdf) |
 
-[电子电路与测试](../electronics/) · [作品集首页](../../)
+[电子实物作品设计、焊接与调试](../electronics/) · [作品集首页](../../)
