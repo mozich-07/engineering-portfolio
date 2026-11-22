@@ -1,0 +1,119 @@
+[
+  {
+    "id": "lowlight",
+    "name": "暗光背包",
+    "file": "lowlight.png",
+    "reference": "lowlight_reference.png",
+    "note": "观察暗部提亮和噪声变化",
+    "source": "bag.jpg",
+    "recipe": "I=0.5R^1.8"
+  },
+  {
+    "id": "lowcontrast",
+    "name": "低对比度相机",
+    "file": "lowcontrast.png",
+    "reference": "lowcontrast_reference.png",
+    "note": "观察直方图展开及HE的强增强",
+    "source": "camera.jpg",
+    "recipe": "gray: I=0.30+0.32R"
+  },
+  {
+    "id": "color",
+    "name": "彩色运动鞋",
+    "file": "color.png",
+    "reference": "color_reference.png",
+    "note": "观察只处理亮度后的色彩变化",
+    "source": "shoe.jpg",
+    "recipe": "Lab: Lnew=30+0.35L"
+  },
+  {
+    "id": "overexposed",
+    "name": "过亮手表",
+    "file": "overexposed.png",
+    "reference": "overexposed_reference.png",
+    "note": "已截断的亮部细节无法恢复",
+    "source": "watch.jpg",
+    "recipe": "I=min(1,0.32+0.85R)"
+  },
+  {
+    "id": "noise",
+    "name": "含噪灰度测试图",
+    "file": "noise.png",
+    "reference": "noise_reference.png",
+    "note": "观察CLAHE放大噪声与融合处理的取舍",
+    "source": "程序生成",
+    "recipe": "I=clip(0.25+0.3R+0.02N)"
+  },
+  {
+    "id": "mountain",
+    "name": "低对比度山谷",
+    "file": "mountain.png",
+    "reference": "mountain_reference.png",
+    "note": "灰度山谷适合解释CDF展开与层次",
+    "source": "mountain.jpg",
+    "recipe": "gray: I=0.22+0.42R"
+  },
+  {
+    "id": "lake",
+    "name": "非均匀照明湖泊",
+    "file": "lake.png",
+    "reference": "lake_reference.png",
+    "note": "左右亮度不同，观察局部统计的作用",
+    "source": "lake.jpg",
+    "recipe": "I=R*(0.30+0.60x), x in [0,1]"
+  },
+  {
+    "id": "forest",
+    "name": "暗光森林",
+    "file": "forest.png",
+    "reference": "forest_reference.png",
+    "note": "观察林间暗部与原有光照氛围",
+    "source": "forest.jpg",
+    "recipe": "I=0.60R^1.6"
+  },
+  {
+    "id": "ocean",
+    "name": "过亮海浪",
+    "file": "ocean.png",
+    "reference": "ocean_reference.png",
+    "note": "观察高亮波纹和端点像素",
+    "source": "ocean.jpg",
+    "recipe": "I=min(1,0.26+0.90R)"
+  },
+  {
+    "id": "leaves",
+    "name": "含噪绿叶",
+    "file": "leaves.png",
+    "reference": "leaves_reference.png",
+    "note": "细密叶片纹理与噪声同时存在",
+    "source": "leaves.jpg",
+    "recipe": "I=clip(0.20+0.45R+0.018N)"
+  },
+  {
+    "id": "books",
+    "name": "低对比度台灯",
+    "file": "books.png",
+    "reference": "books_reference.png",
+    "note": "观察大面积平滑墙面与台灯边缘",
+    "source": "books.jpg",
+    "recipe": "I=0.28+0.36R"
+  },
+  {
+    "id": "bedroom",
+    "name": "偏亮卧室",
+    "file": "bedroom.png",
+    "reference": "bedroom_reference.png",
+    "note": "观察亮色室内物体的纹理与饱和",
+    "source": "bedroom.jpg",
+    "recipe": "I=min(1,0.22+0.90R)"
+  },
+  {
+    "id": "food",
+    "name": "低对比度餐食",
+    "file": "food.png",
+    "reference": "food_reference.png",
+    "note": "观察多种食材的色调与亮度分布",
+    "source": "food.jpg",
+    "recipe": "Lab: Lnew=25+0.45L"
+  }
+]

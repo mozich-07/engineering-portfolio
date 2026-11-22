@@ -12,8 +12,10 @@
 
 ## 团队及设备实践
 
+[四足集群方向与单机原型](details/multi-robot-research.md) · [智能鱼缸](details/smart-aquarium.md) · [循迹小车](details/line-following-car.md) · [机械臂](details/robot-arm-lab.md)
+
 | 智能鱼缸的触屏控制 | 循迹小车底板 | 机械臂实验设备 |
 | --- | --- | --- |
 | ![鱼缸演示画面](assets/aquarium-hmi.jpg) | ![小车底板](assets/car.jpg) | ![机械臂](assets/arm.jpg) |
 
-鱼缸图片取自省级大创团队的演示视频，前景是控制面板，我承担项目文档撰写。小车和机械臂对应我的设备操作与调试实践。另有 51、STM32 和 ESP32 开发板的外设学习记录。[开发板实物照片](assets/development-board.jpg)
+鱼缸图片取自省级大创团队的演示视频，前景是控制面板，我承担项目文档撰写。小车和机械臂对应我的设备操作与调试实践。另有 51、STM32 和 ESP32 开发板的外设学习记录。[开发板实物](details/dev-board-labs.md) · [51 外设练习](details/mcs51-peripheral-labs.md) · [STM32 外设练习](details/stm32-peripheral-labs.md)

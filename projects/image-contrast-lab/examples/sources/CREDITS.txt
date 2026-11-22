@@ -1,0 +1,6 @@
+十二张照片来自Unsplash，下载地址、SHA256及许可链接见cases.json。
+许可：https://unsplash.com/license
+本项目仅将照片作为直方图增强示例，各照片来源链接与哈希均可核对。
+buildCases.m明确给出受控退化与随机种子，参考图为退化前的缩放照片。
+另有一张含噪灰度测试图由程序生成。
+MATLAB与Image Processing Toolbox属于MathWorks产品，本包不包含其安装程序或许可证。

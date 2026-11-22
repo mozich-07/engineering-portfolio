@@ -1,0 +1,5 @@
+conf,mode,records,mean_reference,mean_predicted,mean_difference,mean_absolute_error
+0.25,full,120,143.066667,152.15,9.083333,16.05
+0.25,tiles,120,143.066667,156.491667,13.425,20.175
+0.35,full,120,143.066667,136.116667,-6.95,17.6
+0.35,tiles,120,143.066667,141.733333,-1.333333,17.516667

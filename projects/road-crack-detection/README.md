@@ -27,7 +27,7 @@
 
 ## 复算结果
 
-在 MATLAB 中切换到此目录，运行 `verify_results`。脚本从 TP、FP、FN 复算图块 F1 和逐图 IoU，再与历史汇总表核对。无需下载路面照片或模型权重。仓库提供实验输出与像素评价函数，完整训练和 GUI 位于原工程。
+在 MATLAB 中切换到此目录，运行 `verify_results`。脚本从 TP、FP、FN 复算图块 F1 和逐图 IoU，再与历史汇总表核对。无需下载路面照片或模型权重。同时提供[原像素分割算法](+crack/analyze.m)、[训练好的随机森林](models/pixel_forest.mat)及[Frangi 滤波代码和上游许可](third_party/frangi/)。在本目录执行 `setup_project; [model,p] = crack.loadModel(pwd); r = crack.analyze("road.jpg","fusion",p,model); imshow(r.overlay)` 即可把分割结果叠回自己的照片。加载分类器需要 Statistics and Machine Learning Toolbox，图像处理需要 Image Processing Toolbox。
 
 - [图块筛查与外部数据对照](results/classification_summary.csv)
 - [逐图分割结果](results/test_per_image.csv) · [各方法汇总](results/test_summary.csv)

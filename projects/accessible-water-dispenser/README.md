@@ -17,3 +17,5 @@
 <img src="assets/bottle-tray.png" width="450" alt="换桶装置申请附图，打开柜门后可见托板、升降块与上方插管">
 
 **成果记录。** 我独立申请的实用新型《一种用于饮水机的桶装水更换辅助装置》于 2026 年 3 月受理。团队另发表了关于手势与语音双模取水的会议论文，我为第四作者，承担结构图绘制和部分章节撰写。[论文题录与 DOI](https://doi.org/10.1007/978-981-95-7928-0_12)
+
+[换桶机构的 CAD 附图](../../collections/mechanical/drawings/bottle-tray.dwg) · [三套滨水总平面和支座模型](../../collections/mechanical/)

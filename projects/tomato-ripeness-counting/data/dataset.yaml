@@ -1,0 +1,7 @@
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: green
+  1: half_ripened
+  2: fully_ripened

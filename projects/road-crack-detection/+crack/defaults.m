@@ -1,0 +1,6 @@
+function p = defaults()
+% 参数版本随模型保存，模型与特征定义须保持一致。
+p = struct('maxDimension',480,'scales',[1 2 3 4], ...
+    'threshold',0.5,'minArea',20,'closeRadius',1,'mmPerPixel',0, ...
+    'seed',20261007,'trees',40,'samplesPerClass',900,'featureVersion',1);
+end

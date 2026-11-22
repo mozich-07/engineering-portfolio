@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>照片转拼豆图纸与材料统计系统</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><div><strong>照片转拼豆图纸系统</strong><p>照片转拼豆图纸与材料统计系统</p></div><nav></nav></header>
+<main><div class="intro"><div><p>操作顺序：选图片 → 设置网格和颜色数量 → 生成图纸 → 查看或导出材料表。</p></div><button id="demo">恢复草莓示例</button></div>
+<div class="workspace">
+<aside class="controls">
+<h2><span>01</span> 选择照片</h2>
+<label class="upload" for="photo">选择图片文件<small>PNG / JPEG / WebP，最大 20 MB</small></label><input type="file" id="photo" accept="image/png,image/jpeg,image/webp" hidden>
+<label for="sampleGroup">示例图片（18 张）</label><select id="sampleGroup"><option value="推荐演示">推荐演示</option><option value="轮廓与细节">轮廓与细节</option><option value="复杂场景">复杂场景</option><option value="all">全部图片</option></select><div id="samples" class="samples"></div><p class="hint">点击示例即可生成图纸。复杂场景用于比较纹理和背景对结果的影响。</p>
+<h2><span>02</span> 参数设置</h2>
+<label for="size">图纸长边 <output id="sizeValue">48 颗</output></label><input id="size" type="range" min="16" max="96" step="8" value="48">
+<label for="colors">最多使用颜色 <output id="colorsValue">16 色</output></label><input id="colors" type="range" min="2" max="36" value="16">
+<div class="pair"><div><label for="fit">画面范围</label><select id="fit"><option value="aspect">完整照片</option><option value="square">居中裁成正方形</option></select></div><div><label for="method">配色方式</label><select id="method"><option value="lab">Lab 色差</option><option value="rgb">RGB 距离</option></select></div></div>
+<label for="palette">豆子色卡</label><select id="palette"><option value="starter">基础 36 色（演示色卡）</option><option value="perler">Perler 品牌参考色卡</option></select>
+<p class="hint">D 编号为演示色号。品牌参考色卡提供采购参考号，屏幕颜色需与实物核对。</p>
+<label class="check"><input type="checkbox" id="cleanup"> 合并孤立色块（可能损失小细节）</label>
+<label class="check"><input type="checkbox" id="transparent" checked> 透明区域留空</label>
+<details><summary>更多设置与色卡</summary><label for="contrast">对比度</label><select id="contrast"><option value="1">原始 1.0</option><option value="1.15">增强 1.15</option><option value=".85">柔和 0.85</option></select><label class="upload small" for="paletteFile">导入 JSON 色卡</label><input type="file" id="paletteFile" accept=".json" hidden><button id="paletteTemplate">下载色卡模板</button><p class="hint">色卡为对象数组，包含 code、name、hex，可选 source_code。</p></details>
+<button id="generate" class="primary full">生成拼豆图纸</button>
+<p id="status" role="status" aria-live="polite">已准备好示例照片。</p>
+<details><summary>读取已保存的图纸</summary><label class="upload small" for="projectFile">打开已保存的 JSON 项目</label><input type="file" id="projectFile" accept=".json" hidden></details>
+</aside>
+<section class="studio">
+<div class="studio-top"><div><h2 id="photoTitle">草莓</h2><p id="resultCaption">生成图纸后可查看编号和用量。</p></div><div class="tabs" role="group" aria-label="结果视图"><button data-view="beads" class="active">拼豆预览</button><button data-view="pattern">编号图纸</button></div></div>
+<div class="images">
+<figure><figcaption>原始照片</figcaption><div class="original-wrap"><img id="original" alt="待转换的原始照片"></div></figure>
+<figure><figcaption id="viewCaption">拼豆预览</figcaption><div id="resultView" class="result-view"><p>点击“生成拼豆图纸”开始</p></div></figure>
+</div>
+<div class="stats"><div><strong id="total">—</strong><span>实际用豆 / 颗</span></div><div><strong id="used">—</strong><span>实际颜色 / 种</span></div><div><strong id="dimensions">—</strong><span>估算成品 / 厘米</span></div><div><strong id="boards">—</strong><span>29 × 29 拼板 / 块</span></div></div>
+<p class="hint" id="metric">色差只用于比较自动配色效果。成品尺寸按豆间距 5 mm 估算。</p>
+<details id="editPanel"><summary>修改单个格子</summary><div class="edit-row"><label for="editColor">目标色号</label><select id="editColor"></select><button id="enableEdit">开启点选编辑</button><button id="undo" disabled>撤销一步</button></div><p class="hint" id="editHint">开启后切换到编号图纸，点击网格修改。材料用量随图纸同步更新。</p><div class="edit-row"><label for="editRow">行</label><input id="editRow" type="number" value="1" min="1" max="96"><label for="editCol">列</label><input id="editCol" type="number" value="1" min="1" max="96"><button id="applyCell">按坐标修改</button></div></details>
+<section class="materials"><div class="section-title"><h2><span>03</span> 图纸与材料</h2><div class="supply"><label for="spare">余量 %</label><input id="spare" type="number" min="0" max="100" value="10"><label for="bag">每袋颗数</label><input id="bag" type="number" min="1" max="10000" value="100"></div></div><p class="hint">备料按每种颜色分别向上取整；袋数按备料数计算。</p>
+<div class="exports"><button id="exportPNG" data-export>保存预览 PNG</button><button id="exportSVG" data-export>保存编号 SVG</button><button id="exportCSV" data-export>材料清单 CSV</button><button id="exportMatrix" data-export>坐标矩阵 CSV</button><button id="print" class="primary" data-export>分区打印 / PDF</button><button id="saveProject" data-export>保存项目</button><label class="check"><input id="mono" type="checkbox">黑白打印</label></div>
+<div class="table-scroll"><table><thead><tr><th>色号 / 颜色</th><th>品牌参考号</th><th>实际颗数</th><th>备料颗数</th><th>建议袋数</th></tr></thead><tbody id="materialBody"></tbody></table></div><p id="materialTotal"></p></section>
+</section></div>
+<footer>照片转拼豆图纸系统　　｜　照片只在当前浏览器处理</footer>
+</main><script src="assets.js"></script><script src="../core.js"></script><script src="app.js"></script></body></html>

@@ -1,0 +1,5 @@
+kind,records,mean_baselineCandidates,mean_acceptedCandidates,mean_endings,mean_bifurcations
+clean,48,33.416667,30.75,17.333333,13.416667
+dust,48,47.270833,23.041667,14.354167,8.6875
+occlusion,48,41.9375,22.020833,12.5,9.520833
+blur,48,48.520833,18.479167,10.458333,8.020833

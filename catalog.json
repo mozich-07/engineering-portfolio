@@ -32,14 +32,14 @@
     "slug": "multi-robot-research",
     "name": "多足机器人集群课题",
     "group": "embedded",
-    "page": "collections/embedded/README.md"
+    "page": "collections/embedded/details/multi-robot-research.md"
   },
   {
     "id": "P06",
     "slug": "smart-aquarium",
     "name": "智能养鱼管家",
     "group": "embedded",
-    "page": "collections/embedded/README.md"
+    "page": "collections/embedded/details/smart-aquarium.md"
   },
   {
     "id": "P07",
@@ -60,14 +60,14 @@
     "slug": "image-watermark-lab",
     "name": "图片盲水印实验",
     "group": "imaging",
-    "page": "collections/imaging/README.md"
+    "page": "projects/image-watermark-lab/README.md"
   },
   {
     "id": "P10",
     "slug": "weld-wire-counter",
     "name": "焊丝端面识别与计数",
     "group": "ml",
-    "page": "collections/ml/README.md"
+    "page": "projects/weld-wire-counter/README.md"
   },
   {
     "id": "P11",
@@ -81,105 +81,105 @@
     "slug": "image-contrast-lab",
     "name": "图像直方图与对比度增强",
     "group": "imaging",
-    "page": "collections/imaging/README.md"
+    "page": "projects/image-contrast-lab/README.md"
   },
   {
     "id": "P13",
     "slug": "optical-dispersion-compensation",
     "name": "光纤通信色散补偿",
     "group": "ml",
-    "page": "collections/ml/README.md"
+    "page": "projects/optical-dispersion-compensation/README.md"
   },
   {
     "id": "P14",
     "slug": "image-deblurring-lab",
     "name": "图像锐化与模糊复原",
     "group": "imaging",
-    "page": "collections/imaging/README.md"
+    "page": "projects/image-deblurring-lab/README.md"
   },
   {
     "id": "P15",
     "slug": "line-following-car",
     "name": "循迹小车",
     "group": "embedded",
-    "page": "collections/embedded/README.md"
+    "page": "collections/embedded/details/line-following-car.md"
   },
   {
     "id": "P16",
     "slug": "robot-arm-lab",
     "name": "机械臂实践",
     "group": "embedded",
-    "page": "collections/embedded/README.md"
+    "page": "collections/embedded/details/robot-arm-lab.md"
   },
   {
     "id": "P17",
     "slug": "touch-led-lamp",
     "name": "触控调光灯",
     "group": "electronics",
-    "page": "collections/electronics/README.md"
+    "page": "collections/electronics/details/touch-led-lamp.md"
   },
   {
     "id": "P18",
     "slug": "mcs51-peripheral-labs",
     "name": "51 单片机外设练习",
     "group": "embedded",
-    "page": "collections/embedded/README.md"
+    "page": "collections/embedded/details/mcs51-peripheral-labs.md"
   },
   {
     "id": "P19",
     "slug": "stm32-peripheral-labs",
     "name": "STM32 外设练习",
     "group": "embedded",
-    "page": "collections/embedded/README.md"
+    "page": "collections/embedded/details/stm32-peripheral-labs.md"
   },
   {
     "id": "P20",
     "slug": "python-utilities",
     "name": "Python 脚本与小工具",
     "group": "software",
-    "page": "collections/software/README.md"
+    "page": "collections/software/details/python-utilities.md"
   },
   {
     "id": "P21",
     "slug": "fdm-printing-lab",
     "name": "3D 打印与结构建模",
     "group": "mechanical",
-    "page": "collections/mechanical/README.md"
+    "page": "collections/mechanical/details/fdm-printing-lab.md"
   },
   {
     "id": "P22",
     "slug": "laser-cutting-lab",
     "name": "激光切割实践",
     "group": "mechanical",
-    "page": "collections/mechanical/README.md"
+    "page": "collections/mechanical/details/laser-cutting-lab.md"
   },
   {
     "id": "P23",
     "slug": "soldering-kits",
     "name": "焊接套件与练习",
     "group": "electronics",
-    "page": "collections/electronics/README.md"
+    "page": "collections/electronics/details/soldering-kits.md"
   },
   {
     "id": "P24",
     "slug": "metalworking-practice",
     "name": "金工实习",
     "group": "mechanical",
-    "page": "collections/mechanical/README.md"
+    "page": "collections/mechanical/details/metalworking-practice.md"
   },
   {
     "id": "P25",
     "slug": "cad-design",
     "name": "CAD 制图与建模",
     "group": "mechanical",
-    "page": "collections/mechanical/README.md"
+    "page": "collections/mechanical/details/cad-design.md"
   },
   {
     "id": "P26",
     "slug": "pcb-design-lab",
     "name": "PCB 绘制练习",
     "group": "electronics",
-    "page": "collections/electronics/README.md"
+    "page": "collections/electronics/details/pcb-design-lab.md"
   },
   {
     "id": "P27",
@@ -193,49 +193,49 @@
     "slug": "creative-lamp",
     "name": "创意灯具",
     "group": "mechanical",
-    "page": "collections/mechanical/README.md"
+    "page": "collections/mechanical/details/creative-lamp.md"
   },
   {
     "id": "P29",
     "slug": "dev-board-labs",
     "name": "开发板综合练习",
     "group": "embedded",
-    "page": "collections/embedded/README.md"
+    "page": "collections/embedded/details/dev-board-labs.md"
   },
   {
     "id": "P30",
     "slug": "digital-oscilloscope-kit",
     "name": "便携式数字示波器装调",
     "group": "electronics",
-    "page": "collections/electronics/README.md"
+    "page": "collections/electronics/details/digital-oscilloscope-kit.md"
   },
   {
     "id": "P31",
     "slug": "fm-transmitter-lab",
     "name": "FM 无线传声器",
     "group": "electronics",
-    "page": "collections/electronics/README.md"
+    "page": "collections/electronics/details/fm-transmitter-lab.md"
   },
   {
     "id": "P32",
     "slug": "digital-clock-lab",
     "name": "数字电子钟",
     "group": "electronics",
-    "page": "collections/electronics/README.md"
+    "page": "collections/electronics/details/digital-clock-lab.md"
   },
   {
     "id": "P33",
     "slug": "signal-generator-lab",
     "name": "模拟信号发生器",
     "group": "electronics",
-    "page": "collections/electronics/README.md"
+    "page": "collections/electronics/details/signal-generator-lab.md"
   },
   {
     "id": "P34",
     "slug": "image-cartoonization",
     "name": "照片卡通化",
     "group": "imaging",
-    "page": "collections/imaging/README.md"
+    "page": "projects/image-cartoonization/README.md"
   },
   {
     "id": "P35",
@@ -263,7 +263,7 @@
     "slug": "graduate-information-system",
     "name": "毕业生就业信息管理系统",
     "group": "software",
-    "page": "collections/software/README.md"
+    "page": "projects/graduate-information-system/README.md"
   },
   {
     "id": "P39",
@@ -277,48 +277,125 @@
     "slug": "adaptive-dehazing",
     "name": "场景感知自适应去雾",
     "group": "imaging",
-    "page": "collections/imaging/README.md"
+    "page": "projects/adaptive-dehazing/README.md"
   },
   {
     "id": "P41",
     "slug": "fingerprint-feature-extraction",
     "name": "指纹预处理与特征提取",
     "group": "imaging",
-    "page": "collections/imaging/README.md"
+    "page": "projects/fingerprint-feature-extraction/README.md"
   },
   {
     "id": "P42",
     "slug": "construction-ppe-detection",
     "name": "施工安全穿戴检测",
     "group": "ml",
-    "page": "collections/ml/README.md"
+    "page": "projects/construction-ppe-detection/README.md"
   },
   {
     "id": "P43",
     "slug": "tomato-ripeness-counting",
     "name": "番茄成熟阶段检测与数量统计",
     "group": "ml",
-    "page": "collections/ml/README.md"
+    "page": "projects/tomato-ripeness-counting/README.md"
   },
   {
     "id": "P44",
     "slug": "flower-recognition-retrieval",
     "name": "花卉图像识别与检索",
     "group": "ml",
-    "page": "collections/ml/README.md"
+    "page": "projects/flower-recognition-retrieval/README.md"
   },
   {
     "id": "P45",
     "slug": "shelf-inventory-counting",
     "name": "货架商品盘点",
     "group": "ml",
-    "page": "collections/ml/README.md"
+    "page": "projects/shelf-inventory-counting/README.md"
   },
   {
     "id": "P46",
     "slug": "camera-hand-interaction",
     "name": "摄像头手势与粒子交互",
     "group": "imaging",
-    "page": "collections/imaging/README.md"
+    "page": "projects/camera-hand-interaction/README.md"
+  },
+  {
+    "id": "P47",
+    "slug": "ntc-fan",
+    "name": "NTC 温控风扇",
+    "group": "sensing",
+    "page": "collections/sensing/details/ntc-fan.md"
+  },
+  {
+    "id": "P48",
+    "slug": "aquarium",
+    "name": "水族箱水温监测",
+    "group": "sensing",
+    "page": "collections/sensing/details/aquarium.md"
+  },
+  {
+    "id": "P49",
+    "slug": "warehouse",
+    "name": "仓储温湿度监测",
+    "group": "sensing",
+    "page": "collections/sensing/details/warehouse.md"
+  },
+  {
+    "id": "P50",
+    "slug": "garden-light",
+    "name": "庭院灯光照控制",
+    "group": "sensing",
+    "page": "collections/sensing/details/garden-light.md"
+  },
+  {
+    "id": "P51",
+    "slug": "tank-level",
+    "name": "储水箱液位检测",
+    "group": "sensing",
+    "page": "collections/sensing/details/tank-level.md"
+  },
+  {
+    "id": "P52",
+    "slug": "touch-switch",
+    "name": "电容触摸台灯",
+    "group": "sensing",
+    "page": "collections/sensing/details/touch-switch.md"
+  },
+  {
+    "id": "P53",
+    "slug": "tachometer",
+    "name": "反射式光电转速检测",
+    "group": "sensing",
+    "page": "collections/sensing/details/tachometer.md"
+  },
+  {
+    "id": "P54",
+    "slug": "tilt",
+    "name": "箱体倾斜检测",
+    "group": "sensing",
+    "page": "collections/sensing/details/tilt.md"
+  },
+  {
+    "id": "P55",
+    "slug": "scale",
+    "name": "应变式电子秤",
+    "group": "sensing",
+    "page": "collections/sensing/details/scale.md"
+  },
+  {
+    "id": "P56",
+    "slug": "ultrasonic-lid",
+    "name": "超声感应开盖",
+    "group": "sensing",
+    "page": "collections/sensing/details/ultrasonic-lid.md"
+  },
+  {
+    "id": "P57",
+    "slug": "tof-distance",
+    "name": "桌面距离提示",
+    "group": "sensing",
+    "page": "collections/sensing/details/tof-distance.md"
   }
 ]
