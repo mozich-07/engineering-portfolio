@@ -23,7 +23,7 @@
 
 ## 摄像头回传与目标识别
 
-[四足机器人](../../projects/quadruped-robot/)的摄像头负责采集和回传，画面由团队的 Qt 客户端接收。我也参与过循迹小车和机械臂的设备调试及图像识别实践。[循迹小车实物](../embedded/details/line-following-car.md) · [机械臂实物](../embedded/details/robot-arm-lab.md)
+[四足机器人](../../projects/quadruped-robot/)的摄像头负责采集和回传，画面由团队的 Qt 客户端接收。我参与循迹小车调试时，把识别出的边线和引导线叠回弯道画面，并用局部标注记录需要补线的位置。[循迹小车的弯道识别与补线](../embedded/details/line-following-car.md) · [机械臂实物](../embedded/details/robot-arm-lab.md)
 
 在焊丝计数等离线识别项目中，输入换成单张照片，结果是可与人工标注核对的目标框。检测框重叠、漏掉端面或把一个对象框两次，都会影响最终数量。[焊丝检测程序与逐图评估](../../projects/weld-wire-counter/)
 

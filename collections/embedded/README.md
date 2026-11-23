@@ -3,12 +3,12 @@
 | 项目 | 控制平台 | 我负责的部分 |
 | --- | --- | --- |
 | [四足巡检机器人](../../projects/quadruped-robot/) | ESP32-C3、八路舵机 | 主控板、部分舵机程序、打印件适配和单机联调 |
-| [无障碍饮水机](../../projects/accessible-water-dispenser/) | STM32F103、手势与语音模块 | 结构设计、部分控制逻辑和取水联调 |
+| [无障碍饮水机](../../projects/accessible-water-dispenser/) | STM32F103、手势与语音模块 | 参与双模取水控制联调，负责结构绘图，独立设计换桶辅助装置 |
 | [双向交通灯](../../projects/trafficlight-controller/) | Arduino Uno、OLED、数码管 | 独立开发控制固件，完成三种模式与双按键交互 |
 
 ## 桌宠的四个阶段
 
-我先在 STM32 上调整舵机和结构，后来把桌宠做成 PowerPet 的 UPS 状态显示端，再转向 ESP32-C3 和 ESP32-S3。四个阶段的实物、机身模型、上游方案和个人工作放在同一页。[查看桌面机器人演进记录](../../projects/desktop-robot-evolution/)
+我先在 STM32 上调整舵机和结构，后来把桌宠做成 PowerPet 的 UPS 状态显示端，再转向 ESP32-C3 和 ESP32-S3。在演进页可以对照 C3 板卡正反面、触摸调试录像、机身参考模型和 S3 的 LCD 待命画面。[查看桌面机器人演进记录](../../projects/desktop-robot-evolution/)
 
 ## 团队及设备实践
 

@@ -19,7 +19,7 @@
 | [桌面机器人的四次迭代](projects/desktop-robot-evolution/) | [机器学习 · 从道路裂缝检测开始](collections/ml/) | [数字图像处理与摄像头识别](collections/imaging/) |
 | --- | --- | --- |
 | ![STM32 桌宠实物](collections/embedded/assets/desktop-pet.jpg) | ![道路裂缝实验界面](projects/road-crack-detection/assets/workbench.jpg) | ![手掌张开时的粒子交互实录](collections/imaging/assets/hand-open.jpg) |
-| 从 STM32 的动作和表情，到 PowerPet 显示 UPS 状态，再到 ESP32-C3 与 ESP32-S3 毕设的联网、语音和屏幕交互。 | 从一张路面照片开始，看我如何划分数据、比较模型、定位误差。九项实验覆盖分类、检测、分割、回归和通信均衡。 | 同一专题里可以看到摄像头采集的手势如何驱动 Three.js 场景，以及暗光增强、去雾、复原和水印实验怎样评价效果。 |
+| 从 STM32 舵机调试、PowerPet 显示 UPS 状态，到 C3 的触摸反馈和 S3 的语音终端。可直接看板卡实拍、调试录像和 LCD 待命画面。 | 从一张路面照片开始，看我如何划分数据、比较模型、定位误差。九项实验覆盖分类、检测、分割、回归和通信均衡。 | 同一专题里可以看到摄像头采集的手势如何驱动 Three.js 场景，以及暗光增强、去雾、复原和水印实验怎样评价效果。 |
 
 ## 视觉项目实录
 
@@ -44,7 +44,7 @@
 | 项目 | 我做了什么 |
 | --- | --- |
 | [灵眸云控 · 四足巡检机器人](projects/quadruped-robot/) | 绘制双层主控板，参与八路舵机标定和整机联调。可看装配模型与拆盖照片。 |
-| [无碍智饮 · 无障碍饮水机](projects/accessible-water-dispenser/) | 参与双模取水控制，独立设计换桶辅助装置。可对照控制框图、机构附图和会议论文。 |
+| [无碍智饮 · 无障碍饮水机](projects/accessible-water-dispenser/) | 参与手势与语音双模取水控制联调，负责结构绘图，独立设计换桶辅助装置。附控制框图、机构图纸和团队论文。 |
 | [路畅 · 双向交通灯](projects/trafficlight-controller/) | 独立编写 Arduino Uno 固件。项目页有模式切换实拍、引脚表和可编译的草图。 |
 | [电子实物作品设计、焊接与调试](collections/electronics/) | 从数字钟的计数电路、信号发生器的焊接板，到示波器实测的三角波，可对照电路图、元件布局和通电结果。 |
 | [离线题库工坊](projects/quiz-bank-workshop/) | 将 Word 题库整理成可核对、可计分的离线练习工具，附解析引擎、截图和自动化测试。 |
@@ -67,3 +67,5 @@
 | 桌面圣诞树系列 | [圣诞树 1](collections/software/details/desktop-tree-1.md) · [圣诞树 2](collections/software/details/desktop-tree-2.md) · [圣诞树 3](collections/software/details/desktop-tree-3.md) · [圣诞树 4](collections/software/details/desktop-tree-4.md) · [圣诞树 5](collections/software/details/desktop-tree-5.md) · [圣诞树 6](collections/software/details/desktop-tree-6.md) · [圣诞树 7](collections/software/details/desktop-tree-7.md) |
 
 </details>
+
+查找工程文件时，可从 [projects 项目目录](projects/)进入具体作品，或按 [collections 技术专题](collections/)浏览同类项目。[目录与文件说明](docs/project-standard.md)
