@@ -11,7 +11,7 @@
 | 图像处理与实时交互 | [场景去雾](projects/adaptive-dehazing/)用清晰参考图评估恢复效果。[摄像头手势](projects/camera-hand-interaction/)有连续实录，可以看到手部动作如何改变粒子。 |
 | 嵌入式与板级调试 | [STM32 → PowerPet → ESP32-C3 → ESP32-S3](projects/desktop-robot-evolution/)记录从驱动舵机到联网语音交互的演变。[四足机器人](projects/quadruped-robot/)展示双层 PCB、装机和八路舵机标定。[电子实物](collections/electronics/)收录焊接板与示波器实拍。 |
 | 机械制图与结构设计 | [CAD 与 SolidWorks](collections/mechanical/)可以下载 DWG、查看三维模型。[换桶装置](projects/accessible-water-dispenser/)可以沿着申请附图理解螺杆和托板的运动。 |
-| 文献阅读与技术写作 | [无障碍饮水机会议论文及实用新型申请文件](projects/accessible-water-dispenser/#论文与专利申请文件)分别记录团队论文中的分工和我的结构设计。[11 份传感器设计](collections/sensing/#十一个传感器设计)附选型、计算和参考资料。 |
+| 文献阅读与技术写作 | [无障碍饮水机会议论文及实用新型申请文件](projects/accessible-water-dispenser/#论文与专利申请文件)分别记录团队论文中的分工和我的结构设计。[11 篇传感器专题论文](collections/sensing/#传感器专题论文合集)由老师命题，我独立查阅文献、撰写正文，并完成方案分析。 |
 | 项目整理与可复现性 | [裂缝指标复算脚本](projects/road-crack-detection/verify_results.m)能从原始计数复算 F1 和 IoU。[仓库维护约定](docs/project-standard.md)和[自动检查](.github/workflows/verify.yml)记录项目怎样归档、验证链接、测试程序和编译固件。 |
 
 ## 三条项目主线
@@ -21,13 +21,23 @@
 | ![STM32 桌宠实物](collections/embedded/assets/desktop-pet.jpg) | ![道路裂缝实验界面](projects/road-crack-detection/assets/workbench.jpg) | ![手掌张开时的粒子交互实录](collections/imaging/assets/hand-open.jpg) |
 | 从 STM32 的动作和表情，到 PowerPet 显示 UPS 状态，再到 ESP32-C3 与 ESP32-S3 毕设的联网、语音和屏幕交互。 | 从一张路面照片开始，看我如何划分数据、比较模型、定位误差。九项实验覆盖分类、检测、分割、回归和通信均衡。 | 同一专题里可以看到摄像头采集的手势如何驱动 Three.js 场景，以及暗光增强、去雾、复原和水印实验怎样评价效果。 |
 
+## 视觉项目实录
+
+| [指纹细节点提取](projects/fingerprint-feature-extraction/) | [花卉识别与检索](projects/flower-recognition-retrieval/) | [货架盘点](projects/shelf-inventory-counting/) |
+| --- | --- | --- |
+| [![从输入纹线到端点和分叉点](projects/fingerprint-feature-extraction/assets/ridge-stages.jpg)](projects/fingerprint-feature-extraction/) | [![向日葵类别候选和六张相似照片](projects/flower-recognition-retrieval/assets/retrieval-screen.jpg)](projects/flower-recognition-retrieval/) | [![货架标注与检测框并排核对](projects/shelf-inventory-counting/assets/count-match.jpg)](projects/shelf-inventory-counting/) |
+
+| [施工安全穿戴检测](projects/construction-ppe-detection/) | [图像盲水印](projects/image-watermark-lab/) | [照片卡通化](projects/image-cartoonization/) |
+| --- | --- | --- |
+| [![原图与人员、装备检测框](projects/construction-ppe-detection/assets/equipment-match.jpg)](projects/construction-ppe-detection/) | [![咖啡图压缩后的水印读回结果](projects/image-watermark-lab/assets/extraction-screen.jpg)](projects/image-watermark-lab/) | [![红墙门窗的原图和漫画预览](projects/image-cartoonization/assets/cartoon-workbench.jpg)](projects/image-cartoonization/) |
+
 ## CAD 制图与 SolidWorks 建模
 
 我做过滨水空间的 CAD 总平面图，也为饮水机设计了换桶辅助结构。专题中可以下载四份二维 DWG，或打开带孔支座的三维模型，对照草图检查孔径、孔距和外形尺寸。[图纸与可旋转模型](collections/mechanical/)
 
 ## 从传感器输入到波形测量
 
-做桌宠时，我用 PWM 控制舵机；装调示波器时，我从屏幕反过来读信号。两者之间还有温度读取、定时器捕获、数字钟和模拟信号发生器。另外整理了 11 个传感器设计，每个都可以打开电路原图和计算正文。沿着采样、控制和测量看，可以把开发板练习、电路图和实物波形对应起来。[信号怎样被采集、处理和观察](collections/sensing/)
+做桌宠时，我用 PWM 控制舵机；装调示波器时，我从屏幕反过来读信号。两者之间还有温度读取、定时器捕获、数字钟和模拟信号发生器。我还围绕老师给的题目写了 11 篇传感器论文。除了查文献，我也用论文中的电路和计算去理解器件选型、量程和误差。[信号怎样被采集、处理和观察](collections/sensing/)
 
 ## 其他工程作品
 
